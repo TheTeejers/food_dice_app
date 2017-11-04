@@ -2,20 +2,41 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+
+//account/user component/dependency
+import OAuthButton from './components/account/OAuthButton';
+import UserInfo from './components/common/UserInfo';
+import { auth } from './utils/firebase';
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: null
+    };
+  } // end of constructor
+
+  componentWillMount() {
+    auth.onAuthStateChanged(newUser => {
+      this.setState({currentUser: newUser ? newUser : null});
+    });
+  } // end of componentWillMount()
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header>
+          <section className="brand">
+            <img src={logo} className="logo" alt="logo" />
+            <h1 className="name">Food Dice</h1>
+          </section>
+          <OAuthButton currentUser={this.state.currentUser} />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          <UserInfo currentUser={this.state.currentUser}  />
+        </main>
       </div>
     );
-  }
+  } // end of render()
 }
-
-export default App;
