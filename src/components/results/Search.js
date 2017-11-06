@@ -14,11 +14,6 @@ export default class Search extends Component {
      this.setState({value});
   }
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
   addClick(){
     this.setState({count: this.state.count+1})
   }
@@ -46,7 +41,7 @@ export default class Search extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
           {this.createUI()}
           <div id='add-remove-buttons'>
             <input id='add-input' type='button' value='+' onClick={this.addClick.bind(this)}/>

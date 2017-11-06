@@ -7,7 +7,6 @@ import { Redirect } from 'react-router';
 import OAuthButton from '../account/OAuthButton';
 import UserInfo from '../common/UserInfo';
 import { auth } from '../../utils/firebase';
-
 import Random from '../results/Random';
 import Search from '../results/Search';
 import Login from './Login'
