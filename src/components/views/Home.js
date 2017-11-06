@@ -7,7 +7,8 @@ import { Redirect } from 'react-router';
 import OAuthButton from '../account/OAuthButton';
 import UserInfo from '../common/UserInfo';
 import { auth } from '../../utils/firebase';
-
+import Random from '../results/Random';
+import Search from '../results/Search';
 import Login from './Login'
 
 export default class Home extends Component {
@@ -19,8 +20,13 @@ export default class Home extends Component {
             <h1 className="name">Food Dice</h1>
           </section>
         </header>
-      <OAuthButton currentUser={this.props.currentUser} />
-      <p>this is the home page</p>
+        <h1>What are you craving?</h1>
+        <Search />
+        <Random />
+      </div>
+    );
+  }
+}
   {/*
   <div className="App">
         <OAuthButton onClick={ this._handleClick } currentUser={ this.state.currentUser } />
@@ -37,10 +43,3 @@ export default class Home extends Component {
         </main>
       </div>
       */}
-        <main>
-          <UserInfo currentUser={ this.props.currentUser }  />
-        </main>
-      </div>
-    );
-  }
-}

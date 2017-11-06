@@ -24,8 +24,7 @@ export default class Login extends Component {
   render() {
     return (
       <div className="Login">
-                  <OAuthButton currentUser={ this.state.currentUser } />
-
+        <OAuthButton currentUser={ this.state.currentUser } />
       </div>
     );
   }
