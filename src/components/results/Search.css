@@ -1,0 +1,17 @@
+
+#add-input {
+  border-radius: 3px;
+  background-color: grey;
+  color: white;
+  width: 3%;
+}
+#remove-input {
+  border-radius: 3px;
+  background-color: grey;
+  color: white;
+  width: 3%;
+  margin: 3%;
+
+}
+#add-remove-buttons {
+}

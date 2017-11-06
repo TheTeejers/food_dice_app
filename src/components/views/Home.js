@@ -21,7 +21,7 @@ export default class Home extends Component {
             <h1 className="name">Food Dice</h1>
           </section>
         </header>
-        <p>this is the home page</p>
+        <h1>What are you craving?</h1>
         <Search />
         <Random />
       </div>
