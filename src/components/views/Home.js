@@ -9,7 +9,8 @@ import UserInfo from '../common/UserInfo';
 import { auth } from '../../utils/firebase';
 import Random from '../results/Random';
 import Search from '../results/Search';
-import Login from './Login'
+import Login from './Login';
+import Header from '../common/Header.js';
 
 export default class Home extends Component {
   render() {

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
 
 
 //account/user component/dependency
-import OAuthButton from './components/account/OAuthButton';
-import UserInfo from './components/common/UserInfo';
-import { auth } from './utils/firebase';
-import LogoutButton from './components/account/LogoutButton.js';
+import OAuthButton from '../../components/account/OAuthButton';
+import UserInfo from '../../components/common/UserInfo';
+import { auth } from '../../utils/firebase';
+import LogoutButton from '../../components/account/LogoutButton.js';
 
-export default class App extends Component {
+class Header extends Component {
   getUserInfo(){
     if (this.props.currentUser){
       //if user is logged in.....
@@ -40,14 +39,14 @@ export default class App extends Component {
             <button type='button' className='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded="false" aria-controls="navbar">
               <span className='sr-only'>Toggle Navigation</span>
             </button>
-            <Link className='navbar-brand' to='/'>Food Dice</Link>
+
           </div>
           <div id='navbar' className='navbar-collapse collapse'>
             <ul className='nav navbar-nav navbar-right'>
               <li className='dropdown'>
                 {this.getUserInfo()}
                 <ul className='dropdown-menu'>
-                  <li><Link to='/profile'>View Profile</Link></li>
+
                   <li role='separator' className='divider'></li>
                   <li><LogoutButton>Log Out</LogoutButton></li>
                 </ul>
