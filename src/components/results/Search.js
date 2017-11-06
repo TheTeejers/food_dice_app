@@ -5,7 +5,6 @@ export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {value: [], count: 1};
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(i, event) {
@@ -15,7 +14,12 @@ export default class Search extends Component {
   }
 
   addClick(){
-    this.setState({count: this.state.count+1})
+    if (this.state.count < 3) {
+      this.setState({count: this.state.count+1})
+    }
+    else {
+      alert('You can only have up to three fields.')
+    }
   }
 
   removeClick(i){
