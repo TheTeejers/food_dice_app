@@ -8,6 +8,8 @@ import OAuthButton from '../account/OAuthButton';
 import UserInfo from '../common/UserInfo';
 import { auth } from '../../utils/firebase';
 
+import Random from '../results/Random';
+import Search from '../results/Search';
 import Login from './Login'
 
 export default class Home extends Component {
@@ -20,6 +22,8 @@ export default class Home extends Component {
           </section>
         </header>
         <p>this is the home page</p>
+        <Search />
+        <Random />
       </div>
     );
   }
