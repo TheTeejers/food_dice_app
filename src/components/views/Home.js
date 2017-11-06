@@ -19,8 +19,11 @@ export default class Home extends Component {
             <h1 className="name">Food Dice</h1>
           </section>
         </header>
-      <OAuthButton currentUser={this.props.currentUser} />
-      <p>this is the home page</p>
+        <p>this is the home page</p>
+      </div>
+    );
+  }
+}
   {/*
   <div className="App">
         <OAuthButton onClick={ this._handleClick } currentUser={ this.state.currentUser } />
@@ -37,10 +40,3 @@ export default class Home extends Component {
         </main>
       </div>
       */}
-        <main>
-          <UserInfo currentUser={ this.props.currentUser }  />
-        </main>
-      </div>
-    );
-  }
-}
