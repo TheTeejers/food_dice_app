@@ -32,39 +32,22 @@ export default class App extends Component {
       return (<Home currentUser={this.state.currentUser} />);
     }
     else {
-      return (<OAuthButton currentUser={this.state.currentUser} />);
+      return (<Login />);
     }
 return (
-    <Router>
-          <div>
-            <nav>
-              <Link to='/' exact= { true } >Login</Link>
-              <Link to='/home' >Home</Link>
+  <Router>
+        <div>
+          <nav>
+            <Link to='/' exact= { true } >Login</Link>
+            <Link to='/home' >Home</Link>
 
-            </nav>
-            <Switch>
-              <Route exact path='/' component={ Login } />
-              <Route path='/home' component={ Home } />
-            </Switch>
-          </div>
-        </Router>
-        )
-  } // end of render()
-
-  /*
-  <div className="App">
-        <OAuthButton onClick={ this._handleClick } currentUser={ this.state.currentUser } />
-
-        <header>
-          <section className="brand">
-            <img src={logo} className="logo" alt="logo" />
-            <h1 className="name">Food Dice</h1>
-          </section>
-          <OAuthButton currentUser={this.state.currentUser} />
-        </header>
-        <main>
-          <UserInfo currentUser={this.state.currentUser}  />
-        </main>
-      </div>
-      */
+          </nav>
+          <Switch>
+            <Route exact path='/' component={ Login } />
+            <Route path='/home' component={ Home } />
+          </Switch>
+        </div>
+      </Router>
+      )
+  }
 }
